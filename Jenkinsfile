@@ -2,7 +2,7 @@ node {
     def applicationTitle = 'Learnign Project';
 
     stage('Checkout Code') {
-        git branch: 'master', url: ''
+        git branch: 'master', url: 'https://github.com/Umer87/Webhooks_Proj.git'
     }
 
     stage('Compile') {
