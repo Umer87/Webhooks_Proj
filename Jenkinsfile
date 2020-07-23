@@ -9,7 +9,7 @@ node {
         sh 'echo dummy steps'
     }
      stage('Testing') {
-        sh 'echo dummy testing after adding ngrok-NG steps'
+        sh 'echo dummy testing after adding ngrok steps'
     }
     
 }
