@@ -12,4 +12,8 @@ node {
         sh 'echo dummy testing after adding ngrok steps'
     }
     
+    stage('Publishing') {
+        sh 'cat index2.html'
+    }
+    
 }
