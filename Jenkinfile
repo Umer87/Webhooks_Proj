@@ -1,13 +1,18 @@
 node {
-      stage ('')
-           {
+    def applicationTitle = 'Learnign Project';
 
-           }
-      stage ('')
-           {
+    stage('Checkout Code') {
+        git branch: 'master', url: ''
+    }
 
-           }
+    stage('Copy HTML') {
+        sh 'cp index.html /var/www/html/'
+    }
+    stage('Copy Images') {
+        sh 'cp -r images/ /var/www/html/'
+    }
 
-
+    stage('Notify Email') {
+        sh 'echo Sending email a hook'
+    }
 }
-
