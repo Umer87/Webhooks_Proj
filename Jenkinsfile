@@ -15,5 +15,7 @@ node {
     stage('Publishing') {
         sh 'cat index2.html'
     }
-    
+     stage('Version Control') {
+        sh 'echo dummy steps'
+    }
 }
