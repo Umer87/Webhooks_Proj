@@ -9,7 +9,7 @@ pipeline {
         }
     stage ('Code test') {
       steps {
-      sh 'cat index1.html'
+      sh 'cat index2.html'
               }
           }
   }
