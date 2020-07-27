@@ -1,6 +1,8 @@
 pipeline {
     agent any
-  
+    trigger {
+        cron( "* * * * *")
+    }
   statges {
     stage ('Compile') {
       steps {
