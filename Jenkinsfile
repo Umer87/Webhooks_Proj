@@ -32,8 +32,8 @@ pipeline {
         unstable {
            sh  'echo build unstable'
          }
-       unsuccessful {
-           sh  'echo build unsuccessfil'
+       failure {
+           sh  'echo build failure'
          }
     }
 }
