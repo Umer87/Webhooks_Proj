@@ -4,7 +4,7 @@ pipeline {
     emvironment  {        
         Yasir= '33'
         Umer= '45'
-    }
+                   }
    stages {
       stage ('Compile') {
       steps {  echo 'Hello World'  }
@@ -16,11 +16,11 @@ pipeline {
                 submitter "umer,Yasir"
                 parameters {
                     string(name: 'PERSON', defaultValue: 'Choose user', description: 'Who should I say hello to?')
-                }
-            }
+                           }
+                   }
             steps {
                 echo "Hello, ${PERSON}, nice to meet you."
-            }
+                   }
         }     
         stage ('Scripting') {
             steps {  
@@ -59,3 +59,4 @@ pipeline {
     }
 }
    }
+}
