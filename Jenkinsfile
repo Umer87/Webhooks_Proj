@@ -27,6 +27,9 @@ pipeline {
         
         success {
            sh  'echo build success'
+         } 
+        unstable {
+           sh  'echo build unstable'
          }
        unsuccessful {
            sh  'echo build unsuccessfil'
