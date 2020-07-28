@@ -7,6 +7,7 @@ pipeline {
       stage ('Compile') {
       steps {
         echo 'Hello World'
+          exit 1
               }
         }
       
@@ -17,12 +18,18 @@ pipeline {
           }
         }
     post {
-        always {
+       always {
            sh  'echo build completed'
          }
      changed {
            sh  'echo build changed'
          }
-    
+        
+        success {
+           sh  'echo build success'
+         }
+       unsuccessful {
+           sh  'echo build unsuccessfil'
+         }
     }
 }
