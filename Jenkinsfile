@@ -3,7 +3,7 @@ pipeline {
     options {    buildDiscarder(logRotator(numToKeepStr: '03' ) )  }
     environment  {        
         Yasir= '33'
-        Umer= '45'
+        Umer= '32'
                    }
    stages {
       stage ('Compile') {
