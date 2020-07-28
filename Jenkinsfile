@@ -1,20 +1,18 @@
 pipeline {
     agent any
-    triggers {
-        pollSCM("* * * * *")
-            }
-   stages {
+    options {    buildDiscarder(logRotator(numToKeepStr: '05', artifactNumToKeepStr: '05'))   }
+     
+    triggers {  pollSCM("* * * * *")   }
+  
+    stages {
       stage ('Compile') {
-      steps {
-        echo 'Hello World'
-         
-              }
+      steps {  echo 'Hello World'  }
         }
       
     stage ('Code test') {
       steps {
       sh 'cat index2.html'
-          exit 1
+          
               }
           }
         }
