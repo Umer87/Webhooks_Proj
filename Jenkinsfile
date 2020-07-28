@@ -1,7 +1,7 @@
 pipeline {
     agent any
     options {    buildDiscarder(logRotator(numToKeepStr: '03' ) )  }
-    emvironment  {        
+    environment  {        
         Yasir= '33'
         Umer= '45'
                    }
