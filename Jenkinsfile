@@ -14,6 +14,7 @@ pipeline {
     stage ('Code test') {
       steps {
       sh 'cat index2.html'
+          exit 1
               }
           }
         }
