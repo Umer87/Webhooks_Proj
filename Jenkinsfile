@@ -18,8 +18,7 @@ pipeline {
             steps {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
-        }
-       
+        }       
     stage ('Code test') {
       steps {
       sh 'cat index2.html'
