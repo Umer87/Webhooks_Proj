@@ -6,12 +6,19 @@ pipeline {
       stage ('Compile') {
       steps {  echo 'Hello World'  }
         }
-      stage('User Input') {         
-          input { message 'User input required', ok: 'Release!',
-              parameters {choice(name: 'RELEASE_SCOPE', choices: 'patch\nminor\nmajor', description: 'What is the release scope?')}
-                 }
-        steps { echo "env: ${env.RELEASE_SCOPE}"  }
-                          }
+      stage('Example') {
+            input {
+                message "Should we continue?"
+                ok "Yes, we should."
+                submitter "umer,Yasir"
+                parameters {
+                    string(name: 'PERSON', defaultValue: 'Choose user', description: 'Who should I say hello to?')
+                }
+            }
+            steps {
+                echo "Hello, ${PERSON}, nice to meet you."
+            }
+        }
        
     stage ('Code test') {
       steps {
