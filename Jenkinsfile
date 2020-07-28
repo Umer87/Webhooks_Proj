@@ -25,7 +25,7 @@ pipeline {
         stage ('Scripting') {
             steps {  
                 script { 
-                     if (env.Yasir == '33' && env.Umer == '45')
+                     if (env.Yasir == '33' && env.Umer == '46')
                              {  sh 'echo Umer and Yasir Ages'}
                     else { echo 'Hello World' }
                      
