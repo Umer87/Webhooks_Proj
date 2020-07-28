@@ -15,5 +15,14 @@ pipeline {
       sh 'cat index2.html'
               }
           }
-  }
+        }
+    post {
+        always {
+           sh  'echo build completed'
+         }
+     changed {
+           sh  'echo build changed'
+         }
+    
+    }
 }
