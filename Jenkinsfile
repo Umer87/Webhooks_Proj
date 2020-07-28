@@ -30,6 +30,8 @@ pipeline {
                     else { echo 'Hello World' }
                      
                     }
+            }
+        }
                                      
                    
     stage ('Code test') {
@@ -58,5 +60,4 @@ pipeline {
          }
     }
 }
-   }
-}
+ 
