@@ -1,7 +1,10 @@
 pipeline {
     agent any
     options {    buildDiscarder(logRotator(numToKeepStr: '03' ) )  }
-     
+    emvironment  {        
+        Yasir= '33'
+        Umer= '45'
+    }
    stages {
       stage ('Compile') {
       steps {  echo 'Hello World'  }
@@ -18,7 +21,17 @@ pipeline {
             steps {
                 echo "Hello, ${PERSON}, nice to meet you."
             }
-        }       
+        }     
+        stage ('Scripting') {
+            steps {  
+                script { 
+                     if (env.Yasir == '33' && env.Umer == '45')
+                             {  sh 'echo Umer and Yasir Ages'}
+                    else { echo 'Hello World' }
+                     
+                    }
+                                     
+                   
     stage ('Code test') {
       steps {
       sh 'cat index2.html'
